@@ -31,7 +31,7 @@ remove x (Node current left right)
                   (left, right)   -> case minimumVal right of 
                                         Just successor -> Node successor left (remove successor right)
                                         Nothing        -> error "Empty value"
-                    
+
 
 inOrder :: BST -> [Int]
 inOrder Empty                     = []
@@ -56,9 +56,4 @@ insert val (Node current left right)
   | otherwise     = Node current left right
 
 main :: IO ()
-main = do
-  let tree = insert 3 $ insert 20 $ insert 5 $ insert 10 Empty
-  print tree
-
-  let sRes = search 7 tree
-  print sRes
+main = undefined
